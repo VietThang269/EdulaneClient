@@ -1,0 +1,121 @@
+.topbar {
+  width: 100%;
+  height: 75px;
+  padding: 0 30px 0 15px;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 999;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.topbar .ant-btn:hover,
+.ant-btn:focus {
+  color: var(--main-color);
+  border-color: var(--main-color);
+  background: #fff;
+}
+
+.topbar .ant-input-search .ant-input:hover,
+.ant-input-search .ant-input:focus {
+  border-color: var(--main-color);
+}
+
+.ant-input-affix-wrapper {
+  padding: 10px 20px;
+}
+
+.topbar .ant-input {
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+.ant-input-search
+  > .ant-input-group
+  > .ant-input-group-addon:last-child
+  .ant-input-search-button {
+  padding-top: 0;
+  padding-bottom: 0;
+  border-radius: 0 30px 30px 0;
+}
+
+.ant-input-search-button {
+  height: 44px;
+}
+
+.ant-btn-icon-only {
+  width: 44px;
+}
+/* Left */
+.topbar-left {
+}
+
+.topbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.topbar-logo h1 {
+  font-weight: bold;
+  font-size: 28px;
+  color: var(--main-color);
+  line-height: 1;
+  margin: 0 0 0 -10px;
+}
+
+.topbar-logo h1 span {
+  color: var(--orange);
+}
+
+.topbar-logo .logo {
+  width: 100px;
+}
+
+.topbar .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+/* Mid */
+.topbar-mid {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  gap: 1rem;
+}
+
+.topbar-mid p {
+  font-size: 25px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.topbar-mid p span {
+  color: #bdbdbd;
+}
+
+/* Right */
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.topbar-right .avatar {
+  display: flex;
+  align-items: center;
+}
+
+.avatar .info p {
+  margin: 0;
+}
+
+.avatar .info {
+  margin: 0 7px;
+}
+
+.info .info-name {
+  font-weight: 600;
+}

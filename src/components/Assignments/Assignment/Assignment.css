@@ -1,0 +1,55 @@
+.assignment {
+  display: flex;
+  /* justify-content: space-between; */
+  margin-bottom: 20px;
+  align-items: center;
+  height: 55px;
+  padding: 4% 4%;
+  border-radius: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.assignment-title {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.title-content p {
+  margin: 0;
+}
+
+.assignment-time {
+  flex: 1;
+}
+
+.title-content .title-content-chap {
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 14px;
+  line-height: 1.5715;
+}
+
+.title-content .title-content-class {
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.assignment-time p {
+  margin: 0;
+}
+
+.assignment-deadline {
+  /* flex: 1; */
+  width: 100px;
+}
+
+.title-content-class,
+.time-hour,
+.title-deadline {
+  font-weight: 600;
+}

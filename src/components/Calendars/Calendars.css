@@ -1,0 +1,12 @@
+.calendars {
+  background-color: white;
+  border-radius: 10px;
+  padding: 3% 5% 4% 5%;
+}
+
+.calendars .title {
+  color: var(--main-color);
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0;
+}

@@ -1,0 +1,153 @@
+.login-button {
+  color: var(--main-color);
+  border-color: var(--main-color);
+  border-radius: 5px;
+  margin-right: 2rem;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.login .ant-input,
+.ant-input-password {
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.login .ant-btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  border-radius: 5px;
+}
+
+.ant-btn-primary {
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+}
+
+.login .wrapper {
+  padding-left: 3%;
+}
+
+.login {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.login .wrapper {
+  display: flex;
+  overflow: hidden;
+  height: 100%;
+  align-items: center;
+}
+
+/* Left */
+
+.login-left {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.login-logo {
+  display: flex;
+  align-items: center;
+  margin-left: -50px;
+}
+
+.login-logo h1 {
+  font-weight: bold;
+  font-size: 50px;
+  color: var(--main-color);
+  line-height: 1;
+  margin: 0 0 0 -50px;
+}
+
+.login-logo h1 span {
+  color: var(--orange);
+}
+
+.login-logo .logo {
+  width: 250px;
+}
+
+/* Right */
+
+.login-right {
+  position: relative;
+  flex: 3;
+  width: 50%;
+  height: 100%;
+  background-image: linear-gradient(
+    to bottom right,
+    #265180,
+    var(--main-color)
+  );
+  z-index: -1;
+}
+
+.login-right .svg {
+  background-color: white;
+  display: block;
+}
+
+.login-right .wave {
+  position: absolute;
+  z-index: -2;
+  top: 20%;
+  left: -70%;
+  transform: rotate(90deg);
+}
+
+.login-right .people {
+  position: absolute;
+  top: 2%;
+  left: -5%;
+  width: 800px;
+}
+
+/* Login Student */
+.login-student {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  padding: 10%;
+}
+
+.login-student .back {
+  color: black;
+  display: inline-block;
+  width: 80px;
+}
+
+.login-student .back:hover > span {
+  cursor: pointer;
+  color: var(--main-color);
+}
+
+.login-student .ant-col-16 {
+  max-width: 100%;
+}
+
+.login-student .ant-col-offset-8 {
+  margin-left: 0;
+}

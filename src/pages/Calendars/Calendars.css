@@ -1,0 +1,54 @@
+.calendar_page {
+  flex: 1;
+  padding: 1%;
+  display: flex;
+  gap: 1rem;
+}
+
+.calendar_left {
+  padding: 2% 3%;
+  background-color: white;
+  border-radius: 5px;
+  flex: 3;
+}
+
+/* .calendar_time button {
+  position: absolute;
+  top: 0;
+  right: 0;
+} */
+
+.calendar_time {
+  /* position: relative; */
+}
+
+.calendar_right {
+  padding: 2% 3%;
+  background-color: white;
+  border-radius: 5px;
+  flex: 1;
+}
+
+.calendar_container {
+  overflow: scroll;
+  height: 700px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.calendar_container::-webkit-scrollbar {
+  display: none;
+}
+
+.calendar_title {
+  font-weight: bold;
+  color: var(--main-color);
+  margin: 0 0 5px 0;
+}
+
+.modal_calendar p {
+  font-weight: bold;
+  color: var(--main-color);
+}

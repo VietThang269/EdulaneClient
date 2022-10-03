@@ -1,0 +1,32 @@
+.courses_admin {
+  flex: 1 1;
+  padding: 1%;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.courses_admin .ant-tabs-ink-bar {
+  background: var(--main-color);
+}
+
+.courses_admin .tabpane {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.courses_admin .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: var(--main-color);
+}
+
+.courses_admin .ant-tabs-tab:hover {
+  color: var(--main-color);
+}
+
+.courses .ant-empty,
+.courses_admin .ant-empty {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+}

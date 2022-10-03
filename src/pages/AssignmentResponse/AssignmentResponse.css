@@ -1,0 +1,20 @@
+.assignment_response_page {
+  padding: 1%;
+  flex: 1;
+  display: flex;
+  gap: 2rem;
+}
+
+.assignment_response_page-left {
+  flex: 3;
+}
+
+.assignment_response_page-right {
+  flex: 1;
+}
+
+.assignment_response_page-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}

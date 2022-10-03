@@ -1,0 +1,28 @@
+.quizz {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  align-items: center;
+  height: 55px;
+  padding: 4% 4%;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.quizz_title {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.quizz_time {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.quizz_time p {
+  margin: 0;
+  font-weight: bold;
+}

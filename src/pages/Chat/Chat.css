@@ -1,0 +1,37 @@
+.chat {
+  flex: 1;
+  padding: 1%;
+  display: flex;
+  gap: 2rem;
+  height: auto;
+}
+
+.chat_left {
+  flex: 1;
+  background-color: white;
+  border-radius: 5px;
+  padding: 2% 3%;
+}
+.chat_right {
+  flex: 3;
+  background-color: white;
+  border-radius: 5px;
+  padding: 1% 2%;
+}
+
+.chat_container {
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 550px;
+}
+
+.chat_list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.chat_container::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,12 @@
+.quizz_response {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-bottom: 1px solid rgb(235, 234, 234);
+}
+
+.scores {
+  margin: 0;
+  font-weight: bold;
+}

@@ -1,0 +1,153 @@
+.register-button {
+  color: var(--main-color);
+  border-color: var(--main-color);
+  border-radius: 5px;
+  margin-right: 2rem;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.register .ant-input,
+.ant-input-password {
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.register .ant-btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  border-radius: 5px;
+}
+
+.ant-btn-primary {
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+}
+
+.register .wrapper {
+  padding-left: 3%;
+}
+
+.register {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.register .wrapper {
+  display: flex;
+  overflow: hidden;
+  height: 100%;
+  align-items: center;
+}
+
+/* Left */
+
+.register-left {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.register-logo {
+  display: flex;
+  align-items: center;
+  margin-left: -50px;
+}
+
+.register-logo h1 {
+  font-weight: bold;
+  font-size: 50px;
+  color: var(--main-color);
+  line-height: 1;
+  margin: 0 0 0 -50px;
+}
+
+.register-logo h1 span {
+  color: var(--orange);
+}
+
+.register-logo .logo {
+  width: 250px;
+}
+
+/* Right */
+
+.register-right {
+  position: relative;
+  flex: 3;
+  width: 50%;
+  height: 100%;
+  background-image: linear-gradient(
+    to bottom right,
+    #265180,
+    var(--main-color)
+  );
+  z-index: -1;
+}
+
+.register-right .svg {
+  background-color: white;
+  display: block;
+}
+
+.register-right .wave {
+  position: absolute;
+  z-index: -2;
+  top: 20%;
+  left: -70%;
+  transform: rotate(90deg);
+}
+
+.register-right .people {
+  position: absolute;
+  top: 2%;
+  left: -5%;
+  width: 800px;
+}
+
+/* register Student */
+.register-student {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  padding: 10%;
+}
+
+.register-student .back {
+  color: black;
+  display: inline-block;
+  width: 80px;
+}
+
+.register-student .back:hover > span {
+  cursor: pointer;
+  color: var(--main-color);
+}
+
+.register-student .ant-col-16 {
+  max-width: 100%;
+}
+
+.register-student .ant-col-offset-8 {
+  margin-left: 0;
+}

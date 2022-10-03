@@ -1,0 +1,14 @@
+.conversation .avatar {
+  display: flex;
+  align-items: center;
+  padding: 5% 2%;
+}
+
+.conversation:hover {
+  background: #80808038;
+  cursor: pointer;
+}
+
+.conversation {
+  border-radius: 5px;
+}

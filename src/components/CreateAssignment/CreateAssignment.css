@@ -1,0 +1,10 @@
+.create_assignment {
+  position: absolute;
+  top: 105px;
+  right: 29px;
+  z-index: 1;
+}
+
+.create_assignment-modal {
+  margin-top: 1rem;
+}

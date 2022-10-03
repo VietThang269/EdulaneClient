@@ -1,0 +1,22 @@
+.library {
+  flex: 1;
+  padding: 1%;
+}
+
+.library_container {
+  min-height: 100%;
+  background-color: white;
+  padding: 2% 3%;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.library_container > :nth-child(2) img {
+  width: 130%;
+}
+
+.library_container > :nth-child(4) img {
+  width: 130%;
+}

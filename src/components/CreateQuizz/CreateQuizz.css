@@ -1,0 +1,60 @@
+.create_quizz {
+  position: absolute;
+  top: 105px;
+  right: 29px;
+  z-index: 1;
+}
+
+.create_assignment-modal {
+  margin-top: 1rem;
+}
+
+.questions {
+  display: flex;
+}
+
+.questions_title {
+  width: 11%;
+}
+
+.questions_title p {
+  font-weight: bold;
+}
+
+.questions_content {
+  flex: 1;
+}
+
+.questions_edit {
+  width: 10%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.flex {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex p {
+  margin: 0;
+}
+
+.content_question {
+  gap: 2rem;
+}
+
+.ant-form-item-label > label {
+  font-weight: bold;
+}
+
+.anticon-delete {
+  transition: all 0.3s ease-in;
+}
+
+.anticon-delete:hover {
+  color: red;
+  transform: scale(1.2);
+}

@@ -1,0 +1,36 @@
+.course_item {
+  width: 260px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #f0f0f0;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.course_item-img {
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.course_item-img img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.course_item-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px 20px 10px;
+}
+
+.course_item-title p {
+  margin: 0;
+}
+
+.course_item .ant-btn {
+  border-color: var(--main-color);
+}

@@ -1,0 +1,10 @@
+.user_online {
+  flex: 1;
+}
+
+.user_online .title {
+  color: var(--main-color);
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0 0 10px 0;
+}

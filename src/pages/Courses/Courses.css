@@ -1,0 +1,25 @@
+.courses {
+  flex: 1 1;
+  padding: 1%;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.courses .ant-tabs-ink-bar {
+  background: var(--main-color);
+}
+
+.courses .tabpane {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.courses .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: var(--main-color);
+}
+
+.courses .ant-tabs-tab:hover {
+  color: var(--main-color);
+}

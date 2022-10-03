@@ -1,0 +1,43 @@
+.book_item {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 470px;
+  border: 1px solid #f0f0f0;
+  /* justify-content: space-between; */
+}
+
+.book_img {
+  overflow: hidden;
+  flex: 1;
+}
+
+.book_info {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.book_info p {
+  margin: 0;
+}
+
+.book_info > :nth-child(1) {
+  color: var(--main-color);
+  font-weight: bold;
+}
+
+.book_info > :nth-child(2) {
+  font-size: 12px;
+}
+
+.book_dowload {
+}
+
+.book_dowload button {
+  width: 100%;
+}
+
+.book_img img {
+  width: 100%;
+  object-fit: contain;
+}

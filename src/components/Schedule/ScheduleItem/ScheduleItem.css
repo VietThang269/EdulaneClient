@@ -1,0 +1,30 @@
+.schedule_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.schedule_item-title {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.schedule_item-title .number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #f0f0f0;
+  width: 40px;
+  height: 40px;
+}
+
+.schedule_item-content .item-title {
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 600;
+  margin: 0;
+}
+
+.schedule_item-content .sub-title {
+  margin: 0;
+}

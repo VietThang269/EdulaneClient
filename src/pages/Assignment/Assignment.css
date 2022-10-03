@@ -1,0 +1,23 @@
+.assignment_page {
+  flex: 1;
+  padding: 1%;
+  display: flex;
+  gap: 2rem;
+}
+
+.assignment_page-left {
+  flex: 3;
+}
+
+.assignment_page-right {
+  flex: 1;
+}
+
+.assignment_page-mark,
+.assignment_page-response,
+.assignment_page_upload,
+.assignment_page-instruction {
+  background-color: white;
+  padding: 2% 3%;
+  border-radius: 10px;
+}

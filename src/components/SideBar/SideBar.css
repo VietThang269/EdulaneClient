@@ -1,0 +1,36 @@
+.sidebar {
+  height: inherit;
+}
+
+.sidebar .wrapper {
+  height: 100%;
+}
+
+.ant-menu > :nth-child(1) {
+  margin-top: 50px;
+}
+
+.sidebar .ant-menu-item-selected {
+  color: var(--main-color);
+}
+
+.sidebar .ant-menu-item:hover {
+  background-color: #e6f7ff;
+}
+
+.sidebar .ant-menu-item-selected a,
+.ant-menu-item-selected a:hover {
+  color: var(--main-color);
+}
+
+.sidebar .ant-menu-item:hover {
+  color: var(--main-color);
+}
+.ant-menu-inline .ant-menu-item::after {
+  border-right: 3px solid var(--main-color);
+}
+
+.sidebar a:hover,
+.sidebar a:focus {
+  color: var(--main-color);
+}

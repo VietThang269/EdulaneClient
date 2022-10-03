@@ -1,0 +1,9 @@
+.calendar_item {
+  padding: 2% 5%;
+  border: 5px;
+}
+
+.calendar_time {
+  font-weight: bold;
+  margin: 0;
+}
