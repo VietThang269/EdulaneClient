@@ -97,12 +97,20 @@ function Login() {
                 </Button>
               </Form.Item>
             </Form>
-            <p>
-              Chưa có tài khoản?{" "}
-              <Link to="/register">
-                <a href="#">Đăng ký ngay</a>
-              </Link>
-            </p>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+              }}
+            >
+              <p style={{ margin: 0 }}>
+                Chưa có tài khoản?{" "}
+                <Link to="/register">
+                  <a href="#">Đăng ký ngay</a>
+                </Link>
+              </p>
+            </div>
           </div>
         </div>
         <div className="login-right">

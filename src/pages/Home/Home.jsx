@@ -22,7 +22,6 @@ function Home() {
             <p
               className="title_p"
               style={{
-                margin: 0,
                 fontSize: 14,
                 position: "absolute",
                 top: 10,

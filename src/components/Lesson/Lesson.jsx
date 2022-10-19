@@ -10,6 +10,8 @@ import {
   Input,
   List,
   message,
+  Popover,
+  Popconfirm,
 } from "antd";
 import { useEffect } from "react";
 import { apiUrl } from "../../constants";
@@ -23,6 +25,7 @@ import {
   FilePdfOutlined,
   FilePptFilled,
   FileWordFilled,
+  MoreOutlined,
 } from "@ant-design/icons";
 
 const { TextArea } = Input;
@@ -69,6 +72,8 @@ function Lesson({
   userId,
   user,
   contentId,
+  setLoading,
+  isLoadingreal,
 }) {
   const [teacher, setTeacher] = useState();
   const [comments, setComments] = useState([]);
@@ -138,6 +143,11 @@ function Lesson({
     getComments();
   }, [loadingComment]);
 
+  const handleDeleteLesson = async () => {
+    const res = await axios.delete(`${apiUrl}class_contents/${contentId}`);
+    setLoading(!isLoadingreal);
+  };
+
   return !isLoading && teacher ? (
     <div className="lesson">
       <div className="lesson_avatar">
@@ -164,6 +174,31 @@ function Lesson({
           </p>
         </div>
       </div>
+      {user?.isTeacher && (
+        <div className="lesson_option">
+          <Popover
+            trigger="click"
+            placement="bottom"
+            content={
+              <Popconfirm
+                title="Bạn có chắc muốn xóa bài học này không ?"
+                onConfirm={handleDeleteLesson}
+                okText="Có"
+                cancelText="Không"
+              >
+                <p style={{ margin: 0, cursor: "pointer" }}>Xóa</p>
+              </Popconfirm>
+            }
+          >
+            <MoreOutlined
+              style={{
+                color: "black",
+                fontSize: 30,
+              }}
+            />
+          </Popover>
+        </div>
+      )}
       <div className="lesson_content">
         {parse(rawText)}
         <div className="lesson_content-file">

@@ -114,6 +114,13 @@ function CourseDetail() {
 
   console.log("q", quizzes);
 
+  const [file, setFile] = useState(null);
+  console.log("file", file);
+
+  const handleChangeFile = (e) => {
+    setFile(e.target.files[0]);
+  };
+
   return (
     <div className="course_detail">
       <Tabs defaultActiveKey="1">
@@ -161,6 +168,9 @@ function CourseDetail() {
                     </CopyToClipboard>
                   </div>
                 )}
+              </div>
+              <div>
+                <input type="file" name="file" onChange={handleChangeFile} />
               </div>
               {user.isTeacher && (
                 <div className="course_left_upload shadow">
@@ -276,6 +286,8 @@ function CourseDetail() {
                       userId={userId}
                       createdAt={createdAt}
                       isLoading={isLoading2}
+                      setLoading={setLoading}
+                      isLoadingreal={loading}
                       rawText={rawText}
                       classId={classId}
                       attachedFileUrls={attachedFileUrls}

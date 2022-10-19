@@ -4,7 +4,7 @@ import { apiUrl } from "../../constants";
 import Quizz from "../Quizz/Quizz";
 import "./Task.css";
 
-function Task({ classId, setEmpty }) {
+function Task({ classId }) {
   const [data, setData] = useState();
   const [isLoading3, setLoading3] = useState(true);
 
@@ -16,8 +16,6 @@ function Task({ classId, setEmpty }) {
     getAllQuizz();
   }, [classId, isLoading3]);
 
-  console.log(data?.length);
-  if (data?.length === 0) setEmpty(true);
   return (
     <div className="task">
       {data?.map(({ _id, title, quiz_questions, startingDate, repeatQuiz }) => (

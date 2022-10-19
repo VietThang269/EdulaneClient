@@ -44,8 +44,8 @@
 }
 
 .assignment-deadline {
-  /* flex: 1; */
-  width: 100px;
+  flex: 0.4;
+  /* width: 100px; */
 }
 
 .title-content-class,

@@ -32,9 +32,10 @@ function Chat() {
   }, [user._id]);
 
   // Connect to Socket.io
+  // console.log("user", user?._id);
   useEffect(() => {
     socket.current = io(`${apiUrl}`);
-    socket.current.emit("new-user-add", user._id);
+    socket.current.emit("new-user-add", user?._id);
     socket.current.on("get-users", (users) => {
       setOnlineUsers(users);
     });
@@ -64,7 +65,14 @@ function Chat() {
   return (
     <div className="chat">
       <div className="chat_left">
-        <h2>Nhắn tin</h2>
+        <h2
+          style={{
+            color: "var(--main-color)",
+            fontWeight: "bold",
+          }}
+        >
+          Nhắn tin
+        </h2>
         <div className="chat_container">
           <div className="chat_list">
             {chats.map((chat) => (

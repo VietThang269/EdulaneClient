@@ -97,6 +97,9 @@ function ChatBox({ chat, currentUser, setSendMessage, receivedMessage }) {
                 </Avatar>
                 <div className="info">
                   <p className="info-name">{userData?.fullName}</p>
+                  <p className="info-position">
+                    {userData?.isTeacher ? "Giảng viên" : "Sinh viên"}
+                  </p>
                 </div>
               </div>
             </div>
@@ -124,9 +127,13 @@ function ChatBox({ chat, currentUser, setSendMessage, receivedMessage }) {
             ))}
           </div>
           <div className="chat-sender">
-            <InputEmoji value={newMessage} onChange={handleChange} />
+            <InputEmoji
+              value={newMessage}
+              onChange={handleChange}
+              placeholder="Hãy viết gì đó..."
+            />
             <Button type="primary" onClick={handleSend}>
-              Send
+              Gửi
             </Button>
           </div>
         </>

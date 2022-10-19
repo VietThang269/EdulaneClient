@@ -34,3 +34,7 @@
 .sidebar a:focus {
   color: var(--main-color);
 }
+
+.wrapper > .ant-menu {
+  width: 250px !important;
+}

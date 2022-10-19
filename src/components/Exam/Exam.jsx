@@ -6,7 +6,7 @@ import Assignment from "../Assignments/Assignment/Assignment";
 import moment from "moment";
 import "./Exam.css";
 
-function Exam({ classId, cut, setEmpty }) {
+function Exam({ classId, cut }) {
   const [data, setData] = useState();
   const [isLoading3, setLoading3] = useState(true);
 
@@ -24,9 +24,8 @@ function Exam({ classId, cut, setEmpty }) {
         ? 1
         : -1
     );
-    data?.splice(1);
+    // data?.splice(1);
   }
-  if (data?.length === 0) setEmpty(true);
 
   return (
     <div className="exam">

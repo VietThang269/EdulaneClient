@@ -1,17 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import "./CourseItem.css";
-import { Button, Card } from "antd";
+import { Button, Card, Input, Modal, Popconfirm, Popover } from "antd";
 import { Progress } from "antd";
 import { Link, useParams } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../contexts/authContext/AuthContext";
+import { DownOutlined, MoreOutlined } from "@ant-design/icons";
+import axios from "axios";
+import { apiUrl } from "../../constants";
 
-function CourseItem({ id, classname, section }) {
+function CourseItem({ id, classname, section, isLoading, setLoading }) {
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [className, setClassName] = useState(classname);
+  const [section1, setSection1] = useState(section);
+
+  const showModal = () => {
+    setIsModalVisible(true);
+  };
+  const handleCancel = () => {
+    setIsModalVisible(false);
+  };
+
   const handleTest = (e) => {
     console.log(e.target.id);
   };
 
   const { user } = useContext(AuthContext);
+
+  const hanldeDeleteCourse = async () => {
+    const res = await axios.delete(`${apiUrl}classes/${id}`);
+    if (res) setLoading(!isLoading);
+  };
+
+  const hanldeUpdateClass = async () => {
+    const res = await axios.put(`${apiUrl}classes/update/${id}`, {
+      className: className,
+      section: section1,
+    });
+    if (res) setLoading(!isLoading);
+  };
   return (
     <div className="course_item">
       <div className="course_item-img">
@@ -57,6 +84,59 @@ function CourseItem({ id, classname, section }) {
           </Button>
         </Link>
       </div>
+      {user?.isTeacher && (
+        <div className="course_option">
+          <Popover
+            zIndex={1}
+            placement="bottom"
+            content={
+              <div className="course_option_inner">
+                <p className="course_update" onClick={showModal}>
+                  Chỉnh sửa
+                </p>
+                <Modal
+                  title="Chỉnh sửa lớp học"
+                  visible={isModalVisible}
+                  onCancel={handleCancel}
+                  okText="Chỉnh sửa"
+                  onOk={hanldeUpdateClass}
+                  cancelText="Đóng"
+                >
+                  <p style={{ marginBottom: 10 }}>Tên lớp</p>
+                  <Input
+                    style={{ borderRadius: 0, marginBottom: 10 }}
+                    value={className}
+                    onChange={(e) => setClassName(e.target.value)}
+                  />
+                  <p style={{ marginBottom: 10 }}>Môn học</p>
+                  <Input
+                    style={{ borderRadius: 0 }}
+                    value={section1}
+                    onChange={(e) => setSection1(e.target.value)}
+                  />
+                </Modal>
+
+                <Popconfirm
+                  title="Bạn có chắc muốn xóa lớp này không ?"
+                  onConfirm={hanldeDeleteCourse}
+                  okText="Có"
+                  cancelText="Không"
+                >
+                  <p className="course_delete">Xóa</p>
+                </Popconfirm>
+              </div>
+            }
+            trigger="click"
+          >
+            <MoreOutlined
+              style={{
+                color: "white",
+                fontSize: 30,
+              }}
+            />
+          </Popover>
+        </div>
+      )}
     </div>
   );
 }

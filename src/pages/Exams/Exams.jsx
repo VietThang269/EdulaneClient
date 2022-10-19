@@ -14,9 +14,6 @@ function Exams({ cut }) {
   const [classTeacher, setClassTeacher] = useState([]);
   const [classStudent, setClassStudent] = useState([]);
   const [isLoading, setLoading] = useState(true);
-  const [empty, setEmpty] = useState(false);
-
-  // const [detail, setDetail] = useState();
 
   useEffect(() => {
     const getAllClassTeacher = async () => {
@@ -45,19 +42,13 @@ function Exams({ cut }) {
       {isLoading && user?.isTeacher ? (
         <Spin />
       ) : (
-        classTeacher.map((id) => (
-          <Exam classId={id} cut={cut} setEmpty={setEmpty} />
-        ))
+        classTeacher.map((id) => <Exam classId={id} cut={cut} />)
       )}
       {isLoading && !user?.isTeacher ? (
         <Spin />
       ) : (
-        classStudent.map((id) => (
-          <Exam classId={id} cut={cut} setEmpty={setEmpty} />
-        ))
+        classStudent.map((id) => <Exam classId={id} cut={cut} />)
       )}
-
-      {empty && <Empty description="Bạn chưa có Assignment nào" />}
     </div>
   );
 }

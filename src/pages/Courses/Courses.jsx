@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Courses.css";
 import { Empty, Tabs } from "antd";
 import CourseItem from "../../components/CourseItem/CourseItem";
@@ -9,24 +9,27 @@ import { AuthContext } from "../../contexts/authContext/AuthContext";
 import JoinClass from "../../components/JoinClass/JoinClass";
 const { TabPane } = Tabs;
 
-const onChange = (key) => {
-  console.log(key);
-};
-
 function Courses() {
+  const [isLoading, setLoading] = useState(false);
   const { courses, dispatch } = useContext(CourseContext);
   const { user } = useContext(AuthContext);
 
   useEffect(() => {
     getCourses(user._id, dispatch);
-  }, [user._id, dispatch]);
+  }, [user._id, dispatch, isLoading]);
 
   return (
     <div className="courses">
-      <Tabs defaultActiveKey="1" onChange={onChange}>
+      <Tabs defaultActiveKey="1">
         <TabPane className="tabpane" tab="Toàn bộ khóa học" key="1">
           {courses.map(({ className, section, _id }) => (
-            <CourseItem id={_id} classname={className} section={section} />
+            <CourseItem
+              id={_id}
+              classname={className}
+              section={section}
+              isLoading={isLoading}
+              setLoading={setLoading}
+            />
           ))}
         </TabPane>
         <JoinClass />

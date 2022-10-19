@@ -11,7 +11,6 @@ function Tasks() {
   const [classTeacher, setClassTeacher] = useState([]);
   const [classStudent, setClassStudent] = useState([]);
   const [isLoading, setLoading] = useState(true);
-  const [empty, setEmpty] = useState(false);
   // const [detail, setDetail] = useState();
 
   useEffect(() => {
@@ -39,17 +38,8 @@ function Tasks() {
   console.log("s", classTeacher);
   return (
     <div className="tasks">
-      {isLoading ? (
-        <Spin />
-      ) : (
-        classTeacher.map((id) => <Task classId={id} setEmpty={setEmpty} />)
-      )}
-      {isLoading ? (
-        <Spin />
-      ) : (
-        classStudent.map((id) => <Task classId={id} setEmpty={setEmpty} />)
-      )}
-      {empty && <Empty description="Bạn chưa có bài kiểm tra nào" />}
+      {isLoading ? <Spin /> : classTeacher.map((id) => <Task classId={id} />)}
+      {isLoading ? <Spin /> : classStudent.map((id) => <Task classId={id} />)}
     </div>
   );
 }

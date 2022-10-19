@@ -58,14 +58,16 @@ function CreateClass() {
         onOk={handleOk}
         onCancel={handleCancel}
         confirmLoading={confirmLoading}
+        okText="Tạo lớp"
+        cancelText="Đóng"
       >
-        <p>Tên lớp</p>
+        <p style={{ marginBottom: 10 }}>Tên lớp</p>
         <Input
           style={{ borderRadius: 0, marginBottom: 10 }}
           value={className}
           onChange={(e) => setClassName(e.target.value)}
         />
-        <p>Môn học</p>
+        <p style={{ marginBottom: 10 }}>Môn học</p>
         <Input
           style={{ borderRadius: 0 }}
           value={section}

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./CoursesAdmin.css";
 import { Empty, Tabs } from "antd";
 import CourseItem from "../../components/CourseItem/CourseItem";
@@ -16,20 +16,27 @@ const onChange = (key) => {
 };
 
 function CoursesAdmin() {
+  const [isLoading, setLoading] = useState(false);
   const { courses, dispatch } = useContext(CourseContext);
   const { user } = useContext(AuthContext);
 
   useEffect(() => {
     const id = user._id;
     getCoursesAdmin(id, dispatch);
-  }, [dispatch]);
+  }, [dispatch, isLoading]);
 
   return (
     <div className="courses_admin">
       <Tabs defaultActiveKey="1" onChange={onChange}>
         <TabPane className="tabpane" tab="Toàn bộ khóa học" key="1">
           {courses.map(({ className, section, _id }) => (
-            <CourseItem id={_id} classname={className} section={section} />
+            <CourseItem
+              id={_id}
+              classname={className}
+              section={section}
+              isLoading={isLoading}
+              setLoading={setLoading}
+            />
           ))}
         </TabPane>
         <CreateClass />

@@ -8,6 +8,7 @@
   overflow: hidden;
   border: 1px solid #f0f0f0;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  position: relative;
 }
 
 .course_item-img {
@@ -33,4 +34,22 @@
 
 .course_item .ant-btn {
   border-color: var(--main-color);
+}
+
+.course_option {
+  position: absolute;
+  top: 8px;
+  right: 2px;
+  cursor: pointer;
+}
+
+.course_option_inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.course_option_inner p {
+  margin: 0;
+  cursor: pointer;
 }

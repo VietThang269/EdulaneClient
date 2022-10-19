@@ -1,4 +1,8 @@
 .exams {
   flex: 1;
-  padding: 2% 3%;
+  margin-top: 15px;
+  padding: 0% 3% 2% 3%;
+  overflow: auto;
+  margin-right: 10px;
+  height: 100%;
 }
